@@ -1,21 +1,5 @@
-const navToggle = document.getElementById("navToggle");
-const nav = document.getElementById("nav");
-
-navToggle.addEventListener("click", () => {
-
-  const open = nav.classList.toggle("open");
-
-  navToggle.setAttribute("aria-expanded", open);
-  navToggle.setAttribute("aria-label", open ? "Tutup menu" : "Buka menu");
-});
-
-nav.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("open");
-    navToggle.setAttribute("aria-expanded", "false");
-    navToggle.setAttribute("aria-label", "Buka menu");
-  });
-});
+// Nav toggle digantikan Bootstrap navbar-toggler + data-bs-toggle="collapse"
+// Tidak perlu kode manual lagi untuk buka/tutup menu
 
 document.getElementById("year").textContent = new Date().getFullYear();
 

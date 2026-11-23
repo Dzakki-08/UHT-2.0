@@ -4,35 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TEFA UHT - Teaching Factory Susu Polije</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- CSS Custom (hanya warna brand & komponen unik TEFA UHT) -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- ═══════════════════════════════════
+       TOPBAR (kustom)
+  ══════════════════════════════════════ -->
   <div class="topbar">
     <div class="container topbar__inner">
       <span>POLITEKNIK NEGERI JEMBER</span>
       <span>Pendidikan vokasi · Inovasi · Kolaborasi</span>
     </div>
   </div>
-  <header class="navbar">
-    <div class="container navbar__inner">
-      <a href="Beranda.html" class="logo">
+
+  <!-- ═══════════════════════════════════
+       NAVBAR — Bootstrap Navbar
+  ══════════════════════════════════════ -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top shadow-sm">
+    <div class="container">
+      <!-- Logo / Brand -->
+      <a class="navbar-brand logo" href="Beranda.html">
         <strong>TEFA UHT</strong>
-        <small>Unit Produksi Susu · Polije</small>
+        <small class="d-block">Unit Produksi Susu · Polije</small>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
-        <span></span><span></span><span></span>
+
+      <!-- Tombol Hamburger (Bootstrap otomatis handle buka/tutup) -->
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+              aria-controls="navbarMenu" aria-expanded="false" aria-label="Buka menu">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <nav class="nav" id="nav">
-        <a href="Beranda.html" class="active">Beranda</a>
-        <a href="tentang.html">Tentang Kami</a>
-        <a href="produk.html">Produk</a>
-        <a href="layanan.html">Layanan</a>
-        <a href="informasi.html">Informasi</a>
-        <a href="hubungi.html">Hubungi Kami</a>
-      </nav>
+
+      <!-- Menu navigasi -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+        <ul class="navbar-nav gap-1">
+          <li class="nav-item"><a class="nav-link active fw-semibold" href="Beranda.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
+          <li class="nav-item"><a class="nav-link" href="informasi.html">Informasi</a></li>
+          <li class="nav-item"><a class="nav-link" href="hubungi.html">Hubungi Kami</a></li>
+        </ul>
+      </div>
     </div>
-  </header>
+  </nav>
+
   <main>
+
+    <!-- ═══════════════════════════════════
+         HERO (kustom — Bootstrap tidak punya)
+    ══════════════════════════════════════ -->
     <section class="hero">
       <img class="hero__bg" src="img/BANNER.webp" alt="BANNER TEFA UHT">
       <div class="hero__overlay"></div>
@@ -43,97 +68,174 @@
         <p class="hero__tagline"><span class="line"></span>Belajar. Berinovasi. Berproduksi.</p>
       </div>
     </section>
-    <section class="about container">
-      <div class="img-box about__img"><img src="img/Beranda1.jpeg" alt="Kegiatan mahasiswa di TEFA UHT"></div>
-      <div class="about__text">
-        <p class="eyebrow">TENTANG TEFA UHT</p>
-        <h2>Ruang belajar dengan pengalaman industri nyata.</h2>
-        <p>TEFA UHT merupakan wadah pembelajaran berbasis produksi di Politeknik Negeri Jember. Mahasiswa mengenal proses pengolahan susu, praktik mutu, dan pengembangan produk melalui kegiatan yang terarah.</p>
-        <a href="tentang.html" class="btn btn--outline">Profil TEFA <span class="arrow">→</span></a>
-      </div>
-    </section>
-    <section class="products">
+
+    <!-- ═══════════════════════════════════
+         TENTANG — Bootstrap Grid (row + col)
+    ══════════════════════════════════════ -->
+    <section class="py-5">
       <div class="container">
-        <div class="products__head">
-          <div>
-            <h2>Kreasi dari pengolahan susu</h2>
-            <p>Kenali ragam produk dan potensi pengembangannya di TEFA UHT.</p>
+        <div class="row align-items-center g-5">
+          <!-- Kolom kiri: gambar -->
+          <div class="col-md-6">
+            <div class="img-box about__img">
+              <img src="img/Beranda1.jpeg" alt="Kegiatan mahasiswa di TEFA UHT">
+            </div>
           </div>
-          <a href="produk.html" class="btn btn--outline">Katalog Produk <span class="arrow">→</span></a>
-        </div>
-        <div class="cards">
-          <article class="card">
-            <div class="img-box card__img"><img src="img/susu ori.jpg" alt="Susu UHT"></div>
-            <div class="card__body">
-              <h3>Susu UHT</h3>
-              <p>Praktis untuk keseharian</p>
-              <a href="produk.html#susu-uht">Lihat di katalog <span class="arrow">→</span></a>
-            </div>
-          </article>
-          <article class="card">
-            <div class="img-box card__img"><img src="img/susu straw.jpg" alt="Yoghurt"></div>
-            <div class="card__body">
-              <h3>Yoghurt</h3>
-              <p>Kreasi susu fermentasi</p>
-              <a href="produk.html#yoghurt">Lihat di katalog <span class="arrow">→</span></a>
-            </div>
-          </article>
-          <article class="card">
-            <div class="img-box card__img"><img src="img/susu uht.avif" alt="Keju"></div>
-            <div class="card__body">
-              <h3>Keju</h3>
-              <p>Peluang kreasi kuliner</p>
-              <a href="produk.html#keju">Lihat di katalog <span class="arrow">→</span></a>
-            </div>
-          </article>
-          <article class="card">
-            <div class="img-box card__img"><img src="img/susu steril.jpeg" alt="Es krim"></div>
-            <div class="card__body">
-              <h3>Es Krim</h3>
-              <p>Lembut di setiap gigitan</p>
-              <a href="produk.html#es-krim">Lihat di katalog <span class="arrow">→</span></a>
-            </div>
-          </article>
+          <!-- Kolom kanan: teks -->
+          <div class="col-md-6">
+            <p class="eyebrow">TENTANG TEFA UHT</p>
+            <h2 class="about__title">Ruang belajar dengan pengalaman industri nyata.</h2>
+            <p class="text-muted" style="font-size:13px; line-height:1.75;">
+              TEFA UHT merupakan wadah pembelajaran berbasis produksi di Politeknik Negeri Jember.
+              Mahasiswa mengenal proses pengolahan susu, praktik mutu, dan pengembangan produk melalui kegiatan yang terarah.
+            </p>
+            <!-- Tombol — Bootstrap btn -->
+            <a href="tentang.html" class="btn btn-outline-primary">Profil TEFA →</a>
+          </div>
         </div>
       </div>
     </section>
-    <section class="container cta-wrap">
-      <div class="cta">
-        <div>
-          <h3>Dari ide menjadi kolaborasi</h3>
-          <p>Diskusikan kebutuhan pembelajaran, pengembangan produk, atau kerja sama bersama TEFA UHT.</p>
+
+    <!-- ═══════════════════════════════════
+         PRODUK — Bootstrap Grid + Bootstrap Card
+    ══════════════════════════════════════ -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <!-- Header produk -->
+        <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-4">
+          <div>
+            <h2 class="products-title">Kreasi dari pengolahan susu</h2>
+            <p class="text-muted small mb-0">Kenali ragam produk dan potensi pengembangannya di TEFA UHT.</p>
+          </div>
+          <!-- Tombol — Bootstrap btn -->
+          <a href="produk.html" class="btn btn-outline-primary">Katalog Produk →</a>
         </div>
-        <a href="hubungi.html" class="btn btn--primary">Hubungi Kami <span class="arrow">→</span></a>
+
+        <!-- Grid 4 kolom (Bootstrap row + col) -->
+        <div class="row g-3">
+
+          <!-- Card 1 -->
+          <div class="col-6 col-md-3">
+            <div class="card h-100 shadow-sm border">
+              <div class="img-box card__img">
+                <img src="img/susu ori.jpg" alt="Susu UHT" class="card-img-top">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h6 fw-bold text-navy">Susu UHT</h3>
+                <p class="card-text small text-muted">Praktis untuk keseharian</p>
+                <a href="produk.html#susu-uht" class="small text-primary-brand">Lihat di katalog →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-6 col-md-3">
+            <div class="card h-100 shadow-sm border">
+              <div class="img-box card__img">
+                <img src="img/susu straw.jpg" alt="Yoghurt" class="card-img-top">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h6 fw-bold text-navy">Yoghurt</h3>
+                <p class="card-text small text-muted">Kreasi susu fermentasi</p>
+                <a href="produk.html#yoghurt" class="small text-primary-brand">Lihat di katalog →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-6 col-md-3">
+            <div class="card h-100 shadow-sm border">
+              <div class="img-box card__img">
+                <img src="img/susu uht.avif" alt="Keju" class="card-img-top">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h6 fw-bold text-navy">Keju</h3>
+                <p class="card-text small text-muted">Peluang kreasi kuliner</p>
+                <a href="produk.html#keju" class="small text-primary-brand">Lihat di katalog →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-6 col-md-3">
+            <div class="card h-100 shadow-sm border">
+              <div class="img-box card__img">
+                <img src="img/susu steril.jpeg" alt="Es krim" class="card-img-top">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h6 fw-bold text-navy">Es Krim</h3>
+                <p class="card-text small text-muted">Lembut di setiap gigitan</p>
+                <a href="produk.html#es-krim" class="small text-primary-brand">Lihat di katalog →</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
+
+    <!-- ═══════════════════════════════════
+         CTA — Bootstrap utilities
+    ══════════════════════════════════════ -->
+    <section class="py-4">
+      <div class="container">
+        <div class="cta-box d-flex justify-content-between align-items-center flex-wrap gap-3 rounded-3 p-4">
+          <div>
+            <h3 class="cta-title mb-1">Dari ide menjadi kolaborasi</h3>
+            <p class="text-muted small mb-0">Diskusikan kebutuhan pembelajaran, pengembangan produk, atau kerja sama bersama TEFA UHT.</p>
+          </div>
+          <!-- Tombol — Bootstrap btn -->
+          <a href="hubungi.html" class="btn btn-primary-navy">Hubungi Kami →</a>
+        </div>
+      </div>
+    </section>
+
   </main>
-  <footer class="footer">
-    <div class="container footer__grid">
-      <div class="footer__brand">
-        <h4>TEFA UHT</h4>
-        <p>Teaching Factory UHT Produksi Susu Politeknik Negeri Jember. Ruang belajar, produksi, dan kolaborasi pengolahan susu.</p>
-        <p class="footer__addr">Jl. Mastrip, Jember, Jawa Timur</p>
+
+  <!-- ═══════════════════════════════════
+       FOOTER — Bootstrap Grid (row + col)
+  ══════════════════════════════════════ -->
+  <footer class="footer pt-4">
+    <div class="container">
+      <!-- Grid 3 kolom Bootstrap -->
+      <div class="row g-4 pb-4" style="border-bottom: 1px solid rgba(255,255,255,.12);">
+
+        <!-- Kolom 1: Brand -->
+        <div class="col-12 col-md-5">
+          <h4 class="text-white mb-2" style="font-size:17px;">TEFA UHT</h4>
+          <p class="footer-text">Teaching Factory UHT Produksi Susu Politeknik Negeri Jember. Ruang belajar, produksi, dan kolaborasi pengolahan susu.</p>
+          <p class="footer-text mt-3">Jl. Mastrip, Jember, Jawa Timur</p>
+        </div>
+
+        <!-- Kolom 2: Navigasi -->
+        <div class="col-6 col-md-4">
+          <h5 class="footer-heading">Jelajahi</h5>
+          <ul class="list-unstyled footer__links">
+            <li><a href="Beranda.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="layanan.html">Layanan</a></li>
+            <li><a href="informasi.html">Informasi</a></li>
+            <li><a href="hubungi.html">Hubungi Kami</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 3: Kontak -->
+        <div class="col-6 col-md-3">
+          <h5 class="footer-heading">Mari terhubung</h5>
+          <p class="footer__contact">Telepon contoh: 0331 000 000<br>Email contoh: tefa-uht@example.com<br>Bukan kontak resmi / ke verifikasi.</p>
+        </div>
+
       </div>
-      <div>
-        <h5>Jelajahi</h5>
-        <ul class="footer__links">
-          <li><a href="Beranda.html">Beranda</a></li>
-          <li><a href="tentang.html">Tentang Kami</a></li>
-          <li><a href="produk.html">Produk</a></li>
-          <li><a href="layanan.html">Layanan</a></li>
-          <li><a href="informasi.html">Informasi</a></li>
-          <li><a href="hubungi.html">Hubungi Kami</a></li>
-        </ul>
+      <!-- Footer bottom -->
+      <div class="footer__bottom py-3">
+        © <span id="year">2026</span> TEFA UHT · Politeknik Negeri Jember. Versi website multibahasa. Foto dan produk merupakan ilustrasi, informasi resmi disesuaikan kemudian.
       </div>
-      <div>
-        <h5>Mari terhubung</h5>
-        <p class="footer__contact">Telepon contoh: 0331 000 000<br>Email contoh: tefa-uht@example.com<br>Bukan kontak resmi / ke verifikasi.</p>
-      </div>
-    </div>
-    <div class="container footer__bottom">
-      © <span id="year">2026</span> TEFA UHT · Politeknik Negeri Jember. Versi website multibahasa. Foto dan produk merupakan ilustrasi, informasi resmi disesuaikan kemudian.
     </div>
   </footer>
+
+  <!-- Bootstrap JS (wajib untuk Navbar mobile collapse) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
