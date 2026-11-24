@@ -17,6 +17,8 @@ ul { list-style: none; }
 .logo strong { font-size: 18px; color: var(--navy); font-weight: 700; }
 .logo small { font-size: 10px; color: var(--muted); }
 .nav { display: flex; gap: 28px; font-size: 13px; font-weight: 500; }
+.navbar__inner > .logo { margin-left: clamp(0px, 1vw, 12px); }
+.navbar__inner > .nav { justify-content: flex-end; margin-right: clamp(-12px, -1vw, 0px); }
 .nav a { padding: 22px 0 18px; border-bottom: 2px solid transparent; transition: color .2s; }
 .nav a:hover { color: var(--blue); }
 .nav a.active { color: var(--navy); font-weight: 600; border-bottom-color: var(--navy); }
@@ -47,7 +49,7 @@ ul { list-style: none; }
 .btn--outline { background: var(--white); color: var(--navy); }
 .btn--outline:hover { border-color: var(--blue); color: var(--blue); }
 .btn--primary { background: var(--blue); color: var(--white); border-color: var(--blue); }
-.btn--primary:hover { background: var(--navy); border-color: var(--navy); }
+.btn--primary:hover { background: var(--navy); border-color: var(--navy); color: var(--white); }
 .arrow { transition: transform .2s; }
 .btn:hover .arrow, .card__body a:hover .arrow { transform: translateX(3px); }
 .products { background: var(--bg-soft); padding: 44px 0 48px; }
@@ -82,8 +84,8 @@ ul { list-style: none; }
 .page-header p { font-size: 13px; color: var(--muted); max-width: 40em; }
 .subpage { padding-top: 28px; }
 .subnav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; }
-.subnav__link { display: inline-block; font-size: 11px; font-weight: 500; padding: 8px 18px; border-radius: 6px; background: var(--blue-soft); color: var(--muted); transition: background .2s, color .2s; }
-.subnav__link:hover { color: var(--navy); }
+.subnav__link { display: inline-flex; align-items: center; justify-content: center; width: auto; max-width: 100%; height: 36px; box-sizing: border-box; padding: 0 18px; border: 1px solid transparent; border-radius: 6px; font-size: 11px; font-weight: 500; line-height: 1.4; white-space: nowrap; background: var(--blue-soft); color: var(--muted); transition: background .2s, color .2s; }
+.subnav__link:hover { background: var(--blue); color: var(--white); }
 .subnav__link.active { background: var(--blue); color: var(--white); }
 .btn:hover .arrow { transform: translateX(3px); }
 .profile { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
@@ -206,7 +208,7 @@ button.btn { font-family: inherit; cursor: pointer; }
 .field input[aria-invalid="true"]:focus, .field textarea[aria-invalid="true"]:focus { box-shadow: 0 0 0 3px rgba(192, 57, 43, .15); }
 .field__error { font-size: 9.5px; color: #c0392b; margin-top: 5px; min-height: 0; }
 .field__error:empty { display: none; }
-.contact__form .btn { margin-top: 6px; padding: 10px 20px; }
+.contact__form .btn { margin-top: 6px; }
 .tips { padding: 28px 0 44px; }
 .tips__box { background: var(--blue-soft); border-radius: 8px; padding: 18px 22px 20px; }
 .tips__box h3 { font-size: 15px; color: var(--navy); font-weight: 700; margin-bottom: 6px; }
@@ -243,18 +245,19 @@ from { opacity: 0; transform: scale(.6); }
   .contact { grid-template-columns: 1fr; gap: 28px; }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 767px) {
   .topbar__inner span:last-child { display: none; }
   .nav-toggle { display: flex; }
+  .navbar__inner > .logo { margin-left: 0; }
+  .navbar__inner > .nav { justify-content: flex-start; margin-right: 0; }
   .nav { position: absolute; top: 100%; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--line); flex-direction: column; gap: 0; padding: 8px 24px 14px; display: none; }
-  .nav.open { display: flex; }
+  .nav.show, .nav.collapsing { display: flex; }
   .nav a { padding: 12px 0; border-bottom: 1px solid var(--line); }
   .hero { min-height: 360px; }
   .hero h1 { font-size: 28px; }
   .hero__desc { font-size: 14px; }
   .hero__overlay { background: rgba(11, 47, 94, .82); }
   .products__head, .cta { flex-direction: column; align-items: flex-start; }
-  .cta { flex-direction: column; align-items: flex-start; }
 }
 
 @media (max-width: 480px) {
@@ -277,4 +280,15 @@ from { opacity: 0; transform: scale(.6); }
   .gallery__grid { grid-template-columns: 1fr; }
   .success__actions { flex-direction: column; width: 100%; }
   .success__actions .btn { justify-content: center; }
+}
+.btn-outline-primary:hover {
+background: var(--blue); color: var(--white); border-color: var(--blue);
+}
+
+/* Tombol Profil TEFA dan tombol outline */
+.btn-outline-primary {
+    background-color: #edf3fa;
+    color: #526b86;
+    border-color: #dce6f1;
+    transition: all 0.3s ease;
 }

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Informasi - Galeri - TEFA UHT</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,16 +14,16 @@
       <span>Pendidikan vokasi · Inovasi · Kolaborasi</span>
     </div>
   </div>
-  <header class="navbar">
+  <header class="navbar navbar-expand-md p-0">
     <div class="container navbar__inner">
       <a href="Beranda.html" class="logo">
         <strong>TEFA UHT</strong>
         <small>Unit Produksi Susu · Polije</small>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+      <button class="nav-toggle navbar-toggler" id="navToggle" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-label="Buka menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-      <nav class="nav" id="nav">
+      <nav class="nav navbar-collapse collapse" id="nav">
         <a href="Beranda.html">Beranda</a>
         <a href="tentang.html">Tentang Kami</a>
         <a href="produk.html">Produk</a>
@@ -56,16 +57,16 @@
       <div class="gallery__grid">
         <figure class="gallery__item">
           <button class="gallery__btn img-box" type="button" aria-label="Perbesar foto: Ruang pengolahan susu">
-            <img src="img/galeri-ruang-produksi.jpg" alt="Ruang pengolahan susu">
+            <img src="img/DSC00447.jpg" alt="Ruang pengolahan susu">
           </button>
           <figcaption>
             <strong>Ruang pengolahan susu</strong>
-            <span>Fasilitas pembelajaran · foto ilustrasi</span>
+            <span>Mesin · foto ilustrasi</span>
           </figcaption>
         </figure>
         <figure class="gallery__item">
           <button class="gallery__btn img-box" type="button" aria-label="Perbesar foto: Praktik bersama pendamping">
-            <img src="img/galeri-praktik.jpg" alt="Praktik bersama pendamping">
+            <img src="img/trial.jpg" alt="Praktik bersama pendamping">
           </button>
           <figcaption>
             <strong>Praktik bersama pendamping</strong>
@@ -74,7 +75,7 @@
         </figure>
         <figure class="gallery__item">
           <button class="gallery__btn img-box" type="button" aria-label="Perbesar foto: Pengamatan sampel susu">
-            <img src="img/galeri-lab.jpg" alt="Pengamatan sampel susu">
+            <img src="img/magang.jpg" alt="Pengamatan sampel susu">
           </button>
           <figcaption>
             <strong>Pengamatan sampel susu</strong>
@@ -83,7 +84,7 @@
         </figure>
         <figure class="gallery__item">
           <button class="gallery__btn img-box" type="button" aria-label="Perbesar foto: Susu pasteurisasi">
-            <img src="img/galeri-yoghurt.jpg" alt="Susu pasteurisasi">
+            <img src="img/susu ori.jpg" alt="Susu pasteurisasi">
           </button>
           <figcaption>
             <strong>Susu pasteurisasi</strong>
@@ -92,7 +93,7 @@
         </figure>
         <figure class="gallery__item">
           <button class="gallery__btn img-box" type="button" aria-label="Perbesar foto: Susu UHT">
-            <img src="img/galeri-keju.jpg" alt="Susu UHT">
+            <img src="img/susu uht.avif" alt="Susu UHT">
           </button>
           <figcaption>
             <strong>Susu UHT</strong>
@@ -101,7 +102,7 @@
         </figure>
         <figure class="gallery__item">
           <button class="gallery__btn img-box" type="button" aria-label="Perbesar foto: Susu steril">
-            <img src="img/galeri-susu.jpg" alt="Susu steril">
+            <img src="img/susu steril.jpeg" alt="Susu steril">
           </button>
           <figcaption>
             <strong>Susu steril</strong>
@@ -152,6 +153,7 @@
     <img id="lightboxImg" src="" alt="">
     <p id="lightboxCaption" class="lightbox__caption"></p>
   </dialog>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
   <script src="js/galeri.js"></script>
 </body>
